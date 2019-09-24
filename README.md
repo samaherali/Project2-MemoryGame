@@ -5,6 +5,6 @@ build a complete browser-based card matching game
 
 ## How to Run: 
 
-1.Clone the repository
-2.cd to index.html
-3.In your browser The Memory Game can be viewed
+- Clone the repository
+- cd to index.html
+- In your browser The Memory Game can be viewed
