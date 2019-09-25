@@ -5,9 +5,9 @@ This project from Udacity,The game board consists of sixteen "cards" arranged in
 
 # How to install  
 
-1.Clone the repository from the github 
-2.cd to folder MemoryGame and open index.html from browser
-3.Memory Game can be viewed
+1. Clone the repository from the github 
+2. cd to folder MemoryGame and open index.html from browser
+3. Memory Game can be viewed
 
 # How to play the game
 
