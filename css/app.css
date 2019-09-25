@@ -15,7 +15,10 @@ body {
     margin: 0;
     padding: 0;
 }
-
+header{
+	    margin-top: 1.5rem;
+	
+}
 body {
     background: #ffffff url('../img/geometry2.png');
     /* Background pattern from Subtle Patterns */
@@ -215,4 +218,75 @@ p.success {
 
 .text-right {
     float: right;
+}
+
+@media (max-width:699px) and (min-width:620px) {
+	.deck {
+    width: 590px;
+    min-height: 663px;
+	}
+	.deck .card {
+    height: 120px;
+    width: 120px;
+	}
+}
+
+
+@media (max-width:619px) and (min-width:541px) {
+	.deck {
+    width: 517px;
+    min-height: 586px;
+	}
+	.deck .card {
+    height: 106px;
+    width: 106px;
+	}
+	.score-panel {
+    width: 	408px;
+	}
+}
+
+
+@media (max-width:540px) and (min-width:460px) {
+	.deck {
+    width: 452px;
+    min-height: 518px;
+	}
+	.deck .card {
+    height: 90px;
+    width: 90px;
+	}
+	.score-panel {
+    width: 380px;
+	}
+}
+
+
+@media (max-width:459px) and (min-width:399px) {
+	.deck {
+    width: 368px;
+    min-height: 392px;
+	}
+	.deck .card {
+    height: 65px;
+    width: 65px;
+	}
+	
+	.score-panel {
+    width: 295px;
+	}
+}
+@media only screen and (max-width: 398px) {
+	.deck {
+    width: 294px;
+    min-height: 371px;
+	}
+	
+	.deck .card {
+    height: 50px;
+    width: 50px;
+	}
+.score-panel {
+    width: 250px;
+	}
 }
