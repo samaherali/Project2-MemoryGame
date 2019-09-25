@@ -20,8 +20,8 @@ This project from Udacity,The game board consists of sixteen "cards" arranged in
 
 # Game Dependency
 
--FontAwsome 
--Animate css
--JQuery
--Easytimer
+- FontAwsome 
+- Animate css
+- JQuery
+- Easytimer
 
