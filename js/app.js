@@ -1,16 +1,16 @@
 /*
  * Create a list for the cards
  */
-var cardList = ["fa-diamond", "fa-paper-plane-o", "fa-anchor", "fa-bolt", "fa-cube", "fa-leaf", "fa-bicycle", "fa-bomb"];
+let cardList = ["fa-diamond", "fa-paper-plane-o", "fa-anchor", "fa-bolt", "fa-cube", "fa-leaf", "fa-bicycle", "fa-bomb"];
 //  store number of moves and matches found
-var moves = 0;
-var match_found = 0;
+let moves = 0;
+let match_found = 0;
 
 // check when first card is opened
-var game_started = false;
+let game_started = false;
 
 // timer object
-var timer = new Timer();
+let timer = new Timer();
 timer.addEventListener('secondsUpdated', function (e) {                  
     $('#timer').html(timer.getTimeValues().toString());
 });
@@ -23,14 +23,14 @@ function createCard(card) {
 }
 // generate random cards on the deck
 function generateCards() {
-    for (var i = 0; i < 2; i++) {
+    for (let i = 0; i < 2; i++) {
     cardList = shuffle(cardList);
         cardList.forEach(createCard);
     }
 }
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
-    var currentIndex = array.length
+    let currentIndex = array.length
         , temporaryValue, randomIndex;
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -42,7 +42,7 @@ function shuffle(array) {
     return array;
 }
 // Array to keep track of open cards
-openCards = [];
+var openCards = [];
 
 // card functionality
 function toggleCard() {
@@ -100,7 +100,7 @@ function removeOpenCards() {
 // function animations for cards
 $.fn.extend({
     animateCss: function (animationName) {
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        const animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
         this.addClass(animationName).one(animationEnd, function () {
             $(this).removeClass(animationName);
         });
@@ -132,7 +132,7 @@ function addBlankStar() {
 }
 // add initial stars
 function addStars() {
-    for (var i = 0; i < 3; i++) {
+    for (let i = 0; i < 3; i++) {
         $('#stars').append('<li><i class="fa fa-star"></i></li>');
     }
 }
@@ -140,6 +140,7 @@ function addStars() {
 function resetGame() {
     moves = 0;
     match_found = 0;
+    removeOpenCards();
     $('#deck').empty();
     $('#stars').empty();
     $('#game-deck')[0].style.display = "";
@@ -160,7 +161,7 @@ function playGame() {
 function showResults() {
     $('#sucess-result').empty();
     timer.pause();
-    var scoreBoard = `
+    const scoreBoard = `
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
             <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
             <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 " /> </svg>
